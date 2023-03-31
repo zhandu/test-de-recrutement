@@ -1,0 +1,37 @@
+// Global vars
+:root {
+    --primary-color: #15FFF5;
+}
+
+// Mixins
+// Re-used text-shadow style
+@mixin text-shadow($color) {
+    text-shadow: 0.55rem 0.55rem $color;
+}
+
+/* Footer */
+// Use nesting
+#footer {
+    @include text-shadow(#FFFFFF);
+
+    .form__footer {
+        margin: 1rem;
+        @include text-shadow(var(--primary-color));
+    }
+
+    .cgv__footer {
+        margin: 0.5rem;
+        @include text-shadow(var(--primary-color));
+
+        .button {
+            margin: 1rem;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .cgu__footer {
+        margin: 0.5rem;
+        @include text-shadow(var(--primary-color));
+    }
+}
